@@ -13,6 +13,7 @@ import org.saavatech.inventorymgtsystem.enums.UserRole;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)

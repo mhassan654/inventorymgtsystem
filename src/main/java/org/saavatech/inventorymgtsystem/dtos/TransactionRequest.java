@@ -1,27 +1,27 @@
 package org.saavatech.inventorymgtsystem.dtos;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.saavatech.inventorymgtsystem.enums.UserRole;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RegisterRequest {
-    @NotBlank(message = "email is required")
-    private String email;
+public class TransactionRequest {
 
-    @NotBlank(message = "Password is required")
-    private String password;
+    @Positive(message = "product id is required")
+    private Long productId;
 
-    @NotBlank(message = "Name is required")
-    private String name;
+    @Positive(message = "quantity is required")
+    private Integer quantity;
 
-    private UserRole role;
+    private Long supplierId;
+    private String description;
+    private String note;
 }

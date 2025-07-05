@@ -2,6 +2,7 @@ package org.saavatech.inventorymgtsystem.dtos;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.saavatech.inventorymgtsystem.enums.TransactionStatus;
 import org.saavatech.inventorymgtsystem.enums.TransactionType;
@@ -9,6 +10,7 @@ import org.saavatech.inventorymgtsystem.enums.TransactionType;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
