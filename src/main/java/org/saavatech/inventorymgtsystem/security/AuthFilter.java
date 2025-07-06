@@ -33,7 +33,7 @@ public class AuthFilter extends OncePerRequestFilter {
 
         String token = getTokenFromRequest(request);
 
-        if (token == null) {
+        if (token != null && StringUtils.hasText(token)) {
             String email = jwtUtils.getUsernameFromToken(token);
             UserDetails userDetails = customUserDetailsService.loadUserByUsername(email);
 
